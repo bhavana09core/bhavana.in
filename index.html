@@ -7,145 +7,152 @@
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Poppins",sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-  color:white;
-  height:100vh;
-  overflow:hidden;
+    height:100vh;
+    width:100%;
+    color:white;
+    overflow:hidden;
 }
 
-/* HERO BACKGROUND — premium purple, blue, black matte */
+/* BACKGROUND (purple + blue + black premium shades with matte effect) */
 .hero{
-  height:100vh;
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px;
-  background:
-    radial-gradient(circle at 30% 20%, #7C3AED 0%, transparent 40%),
-    radial-gradient(circle at 80% 60%, #2563EB 0%, transparent 40%),
-    #0B0B0F;
-  position:relative;
+    height:100vh;
+    width:100%;
+    position:relative;
+    background: linear-gradient(120deg,
+        #0a0a0a 20%,     /* deep matte black */
+        #1c0f3a 45%,     /* premium purple */
+        #0f2a52 75%,     /* deep blue */
+        #000000 100%);   /* black fade */
 }
 
-/* MATTE GRAIN EFFECT */
+/* Matte grain overlay */
 .hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  opacity:0.25;
-  pointer-events:none;
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(1px);
 }
 
-/* NAVBAR */
-nav{
-  position:absolute;
-  top:30px;
-  left:60px;
-  z-index:2;
+/* TOP LEFT NAV */
+.nav{
+    position:absolute;
+    top:30px;
+    left:60px;
+    display:flex;
+    gap:35px;
+    font-size:14px;
+    letter-spacing:1px;
+    z-index:2;
 }
 
-nav ul{
-  display:flex;
-  gap:40px;
-  list-style:none;
-  font-size:14px;
-  letter-spacing:1px;
+.nav a{
+    color:#bfbfbf;
+    text-decoration:none;
+    transition:0.3s;
 }
 
-nav li{
-  cursor:pointer;
-  opacity:0.85;
+.nav a:hover{
+    color:#6fb3ff;
 }
 
-nav li:hover{
-  opacity:1;
-  color:#7C3AED;
-}
-
-/* LEFT TEXT AREA */
+/* TEXT SECTION */
 .content{
-  max-width:600px;
-  z-index:2;
+    position:absolute;
+    top:50%;
+    left:60px;
+    transform:translateY(-50%);
+    max-width:520px;
+    z-index:2;
 }
 
 .hello{
-  color:#60A5FA;
-  margin-bottom:10px;
-  font-weight:500;
+    color:#6fb3ff;
+    font-size:18px;
+    margin-bottom:10px;
 }
 
-h1{
-  font-size:64px;
-  font-weight:700;
-  margin-bottom:10px;
+.name{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.1;
 }
 
-.tagline{
-  display:inline-block;
-  background:#2563EB;
-  padding:8px 14px;
-  font-size:14px;
-  margin-bottom:20px;
+.title{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:500;
+    color:#6fb3ff; /* simple text, NO background effect */
 }
 
 .bio{
-  font-size:15px;
-  line-height:1.7;
-  color:#D1D5DB;
+    margin-top:20px;
+    font-size:15px;
+    line-height:1.7;
+    color:#d6d6d6;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE IMAGE (keep original color) */
+.profile{
+    position:absolute;
+    right:0;
+    bottom:0;
+    height:100%;
+    z-index:1;
+}
+
 .profile img{
-  height:520px;
-  object-fit:cover;
-  filter:grayscale(100%) contrast(110%);
+    height:100%;
+    object-fit:cover;
 }
 </style>
 </head>
-
 <body>
 
-<nav>
-  <ul>
-    <li>About Me</li>
-    <li>Education</li>
-    <li>Skills</li>
-    <li>Workshops & Certificates</li>
-    <li>Projects</li>
-  </ul>
-</nav>
+<div class="hero">
 
-<section class="hero">
-  <div class="content">
-    <p class="hello">Hello !!!</p>
+    <!-- TOP LEFT MENU -->
+    <div class="nav">
+        <a href="#">About Me</a>
+        <a href="#">Education</a>
+        <a href="#">Skills</a>
+        <a href="#">Workshops & Certificates</a>
+        <a href="#">Projects</a>
+    </div>
 
-    <h1>I'm Bhavana</h1>
+    <!-- TEXT CONTENT -->
+    <div class="content">
+        <div class="hello">Hello !!!</div>
 
-    <h3 class="tagline">
-      Electronics and Communication Engineering Student
-    </h3>
+        <div class="name">
+            I'm Bhavana
+        </div>
 
-    <p class="bio">
-      A rising junior with a strong interest in antenna design and microwave theory,
-      focused on simulation, programming, and system-level implementation. Passionate
-      about exploring communication systems and applying technical concepts to
-      real-world challenges through hands-on learning and practical experience.
-    </p>
-  </div>
+        <div class="title">
+            Electronics and Communication Engineering Student
+        </div>
 
-  <div class="profile">
-    <img src="bavna.png" alt="Bhavana">
-  </div>
-</section>
+        <div class="bio">
+            A rising junior with a strong interest in antenna design and microwave theory,
+            focused on simulation, programming, and system-level implementation. Passionate
+            about exploring communication systems and applying technical concepts to
+            real-world challenges through hands-on learning and practical experience.
+        </div>
+    </div>
+
+    <!-- PROFILE IMAGE -->
+    <div class="profile">
+        <img src="bavna.png" alt="Bhavana">
+    </div>
+
+</div>
 
 </body>
 </html>
-
