@@ -104,18 +104,19 @@ body{
 .profile{
     position:absolute;
     right:0;
-    bottom:0;
+    top:50%;
+    transform: translateY(-50%);   /* this centers it vertically */
     height:100%;
     z-index:1;
     pointer-events:none;
 }
 
 .profile img{
-    height:55%;
+    height:60%;
     object-fit:cover;
 
     /* Blend into background */
-    filter: brightness(0.9) contrast(-0.9);
+    filter: brightness(0) contrast(0);
     
     /* Soft fade into background from left side */
     -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
