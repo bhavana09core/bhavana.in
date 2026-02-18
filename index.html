@@ -7,40 +7,23 @@
     body{
       margin:0;
       font-family:Arial, sans-serif;
-      color:white;
       background:#0a0a0a;
+      color:white;
     }
 
-    /* MAIN 1920 CONTAINER */
-    .container{
-      width:1920px;
-      margin:auto;
-    }
-
-    /* NAVBAR */
-    .nav{
-      position:absolute;
-      top:40px;
-      left:120px;
-      right:120px;
+    /* MAIN WRAPPER */
+    .main{
       display:flex;
-      justify-content:space-between;
-      font-size:18px;
+      min-height:100vh;
     }
 
-    .menu span{
-      margin-left:35px;
-      cursor:pointer;
-      color:#e0e0e0;
-    }
-
-    /* HERO — FULL HD HEIGHT */
-    .hero{
-      height:1080px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:120px;
+    /* LEFT SIDE (STICKY INTRO) */
+    .left{
+      width:40%;
+      padding:80px;
+      position:sticky;
+      top:0;
+      height:100vh;
 
       background:
         radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
@@ -49,139 +32,133 @@
         #0a0a0a;
     }
 
-    /* LEFT TEXT */
-    .left{
-      max-width:750px;
+    .left h1{
+      font-size:60px;
+      margin:10px 0;
     }
 
     .left h3{
       color:#66cfff;
-      margin:5px 0;
-      font-size:24px;
-    }
-
-    .left h1{
-      font-size:90px;
-      margin:10px 0;
-      line-height:1.1;
-      color:#f0f0f0;
+      margin:6px 0;
     }
 
     .left p{
       color:#d0d0d0;
       line-height:1.7;
-      font-size:20px;
-      margin-top:25px;
+      font-size:18px;
+      max-width:420px;
     }
 
-    /* RIGHT IMAGE */
-    .right img{
-      height:820px;
-      border-radius:18px;
+    .profile img{
+      margin-top:30px;
+      width:280px;
+      border-radius:12px;
     }
 
-    /* SECTION AREA */
-    .section{
-      padding:120px;
+    /* RIGHT SIDE CONTENT */
+    .right{
+      width:60%;
+      padding:80px;
       background:#070710;
-      font-size:20px;
+    }
+
+    .section{
+      margin-bottom:70px;
+      max-width:800px;
     }
 
     .section h2{
       color:#66cfff;
-      margin-bottom:20px;
-      font-size:36px;
+      margin-bottom:15px;
+      font-size:32px;
     }
 
     .section p{
-      color:#cfcfcf;
-      max-width:1100px;
       line-height:1.7;
+      color:#cfcfcf;
+      font-size:17px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:15px;
+    }
+
+    .skill{
+      background:#111122;
+      padding:10px 16px;
+      border-radius:8px;
+      font-size:15px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="main">
 
-  <!-- NAVBAR -->
-  <div class="nav">
-    <div><b>Bhavana</b></div>
-    <div class="menu">
-      <span>About Me</span>
-      <span>Education</span>
-      <span>Technical Skills</span>
-      <span>Certificates & Workshops</span>
-      <span>Projects</span>
+  <!-- LEFT PANEL -->
+  <div class="left">
+    <h3>Hello !!!</h3>
+    <h1>I'm Bhavana</h1>
+    <h3>Electronics & Communication Engineering Student</h3>
+
+    <p>
+      A rising junior passionate about antenna design, microwave theory,
+      and communication systems. Focused on simulation, programming,
+      and real-world technical implementation.
+    </p>
+
+    <div class="profile">
+      <img src="bavna.png">
     </div>
   </div>
 
-  <!-- HERO -->
-  <div class="hero">
+  <!-- RIGHT PANEL -->
+  <div class="right">
 
-    <div class="left">
-      <h3>Hello !!!</h3>
-      <h1>I'm Bhavana</h1>
-      <h3>Electronics and Communication Engineering Student</h3>
-
+    <div class="section">
+      <h2>About Me</h2>
       <p>
-        A rising junior with a strong interest in antenna design and microwave theory,
-        focused on simulation, programming, and system-level implementation. Passionate
-        about exploring communication systems and applying technical concepts to
-        real-world challenges through hands-on learning and practical experience.
+        I am an Electronics and Communication Engineering student with strong
+        interest in antenna design, microwave theory, and system-level development.
+        I enjoy learning through simulations, coding, and hands-on technical work.
       </p>
     </div>
 
-    <div class="right">
-      <img src="bavna.png" alt="Profile Photo">
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div class="skill">Antenna Fundamentals</div>
+        <div class="skill">Microwave Theory</div>
+        <div class="skill">Python</div>
+        <div class="skill">Circuit Simulation</div>
+        <div class="skill">HFSS (Learning)</div>
+        <div class="skill">Electronics Design</div>
+      </div>
     </div>
 
-  </div>
+    <div class="section">
+      <h2>Certificates & Workshops</h2>
+      <p>
+        • Tiny Antennas, Big Impact – On-Chip Antenna Design<br>
+        • Internship technical training sessions<br>
+        • Communication systems workshops
+      </p>
+    </div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About Me</h2>
-    <p>
-      I am an Electronics and Communication Engineering student driven by curiosity
-      and a strong passion for understanding how communication systems function.
-      My primary interests lie in antenna design, microwave theory, and practical
-      system-level implementation.
-    </p>
-  </div>
+    <div class="section">
+      <h2>Projects</h2>
+      <p>
+        • Antenna simulation mini projects<br>
+        • Circuit design implementations<br>
+        • Python-based problem solving<br>
+        • Academic hands-on builds
+      </p>
+    </div>
 
-  <!-- EDUCATION -->
-  <div class="section">
-    <h2>Education</h2>
-    <p>
-      Bachelor of Engineering in Electronics and Communication Engineering<br>
-      Rising Junior
-    </p>
-  </div>
-
-  <!-- SKILLS -->
-  <div class="section">
-    <h2>Technical Skills</h2>
-    <p>
-      Antenna Fundamentals, Microwave Theory, Python Programming, Circuit Simulation,
-      System-Level Implementation, Basic Electronics Design
-    </p>
-  </div>
-
-  <!-- CERTIFICATES -->
-  <div class="section">
-    <h2>Certificates & Workshops</h2>
-    <p>
-      Add your workshop and internship certificates here.
-    </p>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <h2>Projects</h2>
-    <p>
-      Add your mini projects, circuit designs, simulations, and technical work here.
-    </p>
   </div>
 
 </div>
