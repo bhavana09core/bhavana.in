@@ -1,105 +1,65 @@
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Bhavana Portfolio</title>
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      color:white;
-      background:#0a0a0a;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  color:white;
+}
 
-    /* NAVBAR */
-    .nav{
-      position:absolute;
-      top:30px;
-      left:60px;
-      right:60px;
-      display:flex;
-      justify-content:space-between;
-      font-size:14px;
-    }
-    .nav span{
-      margin-left:25px;
-      color:#e0e0e0;
-      cursor:pointer;
-    }
+/* SIMPLE CLEAN BACKGROUND LIKE REFERENCE */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px;
 
-    /* HERO BACKGROUND (blue + purple + black) */
-    .hero{
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:80px;
+  background:
+    radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
+    radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
+    #0a0a0a;
+}
 
-      background:
-        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
-        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
-        #0a0a0a;
-    }
+/* LEFT TEXT */
+.left{
+  max-width:650px;
+}
 
-    /* LEFT TEXT */
-    .left{
-      max-width:650px;
-    }
-    .left h1{
-      font-size:68px;
-      margin:10px 0;
-      color:#f0f0f0;
-    }
-    .left h3{
-      color:#66cfff;
-    }
-    .left p{
-      color:#d0d0d0;
-      line-height:1.6;
-      font-size:17px;
-    }
+.left h1{
+  font-size:68px;
+  margin:10px 0;
+  color:#eaeaea;
+}
 
-    /* RIGHT IMAGE */
-    .right img{
-      height:650px;
-      border-radius:12px;
-      filter:grayscale(100%);
-    }
-  </style>
-</head>
+.left h3{
+  color:#66cfff;
+}
 
-<body>
+.left p{
+  line-height:1.6;
+  color:#d0d0d0;
+}
 
-  <div class="nav">
-    <b>ONLINE PORTFOLIO</b>
-    <div>
-      <span>About Me</span>
-      <span>Education</span>
-      <span>Projects</span>
-      <span>Certificates</span>
-      <span>Contact</span>
-    </div>
-  </div>
+/* RIGHT IMAGE */
+.right img{
+  height:650px;
+  border-radius:10px;
+  filter:grayscale(100%);
+}
 
-  <div class="hero">
-    <div class="left">
-      <h3>Hello !!!</h3>
-      <h1>I'm Bhavana H P</h1>
-      <h3>Electronics & Communication Engineering Student</h3>
+/* NAVBAR */
+.nav{
+  position:absolute;
+  top:30px;
+  left:60px;
+  right:60px;
+  display:flex;
+  justify-content:space-between;
+}
 
-      <p>
-        I am a rising junior driven by antenna design, microwave theory, simulation, programming,
-        and system-level implementation. I enjoy applying technical concepts
-        to real-world communication systems through hands-on learning.
-      </p>
-    </div>
-
-    <div class="right">
-      <img src="yourphoto.jpg" alt="Profile Photo">
-    </div>
-  </div>
-
-</body>
-</html>
-```
+.nav span{
+  margin-left:25px;
+  cursor:pointer;
+  color:#dcdcdc;
+}
+</style>
