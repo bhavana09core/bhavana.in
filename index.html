@@ -9,22 +9,28 @@
       font-family:Arial, sans-serif;
       color:white;
       background:#0a0a0a;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
     }
 
-    /* STRICT 1080x1080 FIXED FRAME */
+    /* 1080x1080 FRAME */
     .frame{
       width:1080px;
       height:1080px;
       position:relative;
-      margin:0 auto;   /* centers without resizing */
       overflow:hidden;
+      border-radius:12px;
     }
 
-    /* TOP LEFT MENU */
+    /* MENU TOP LEFT */
     .nav{
       position:absolute;
       top:30px;
-      left:40px;
+      left:60px;
+      display:flex;
       font-size:15px;
       z-index:10;
     }
@@ -32,24 +38,22 @@
     .nav span{
       margin-right:25px;
       cursor:pointer;
-      color:#d0d0d0;
+      color:#cfcfcf;
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero{
-      width:100%;
       height:100%;
       display:flex;
       align-items:center;
       justify-content:space-between;
       padding:80px;
-      box-sizing:border-box;
 
-      /* DARK MATTE BACKGROUND */
+      /* DARKER MATTE BACKGROUND */
       background:
-        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.22), transparent 60%),
-        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.18), transparent 55%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03), transparent 70%),
+        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.25), transparent 45%),
+        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.22), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04), transparent 70%),
         #0a0a0a;
     }
 
@@ -58,38 +62,38 @@
       max-width:520px;
     }
 
-    .hello{
-      font-size:30px;   /* slightly bigger */
-      margin-bottom:6px;
-      color:#cccccc;
+    /* BIGGER HELLO */
+    .left .hello{
+      font-size:28px;
+      color:#66cfff;
+      margin:2px 0;
     }
 
     .left h1{
-      font-size:56px;
+      font-size:58px;
       margin:4px 0;
-      line-height:1.1;
       color:#f0f0f0;
     }
 
-    .role{
-      font-size:20px;
+    /* REMOVE EFFECT — NORMAL WHITE */
+    .left .degree{
       color:#e0e0e0;
-      margin-top:8px;
+      font-size:18px;
+      margin-top:6px;
     }
 
     .left p{
-      color:#cfcfcf;
+      color:#d0d0d0;
       line-height:1.6;
       font-size:16px;
       margin-top:18px;
     }
 
-    /* RIGHT IMAGE */
+    /* IMAGE */
     .right img{
       height:520px;
       border-radius:12px;
     }
-
   </style>
 </head>
 
@@ -101,6 +105,7 @@
     <div class="nav">
       <span>About Me</span>
       <span>Education</span>
+      <span>Technical Skills</span>
       <span>Certificates & Workshops</span>
       <span>Projects</span>
     </div>
@@ -113,7 +118,7 @@
 
         <h1>I'm Bhavana</h1>
 
-        <div class="role">
+        <div class="degree">
           Electronics and Communication Engineering Student
         </div>
 
