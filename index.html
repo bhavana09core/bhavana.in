@@ -105,26 +105,20 @@ body{
     position:absolute;
     right:0;
     top:50%;
-    transform: translateY(-50%);   /* this centers it vertically */
-    height:100%;
+    transform:translateY(-50%);
     z-index:1;
     pointer-events:none;
 }
 
 .profile img{
-    height:60%;
+    height:70%;   /* controls alignment with name & bio */
     object-fit:cover;
-
-    /* Blend into background */
-    filter: brightness(0) contrast(0);
+    filter: brightness(0.9) contrast(0.9);
     
-    /* Soft fade into background from left side */
-    -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
-    mask-image: linear-gradient(to left, black 85%, transparent 100%);
+    /* soft blend */
+    -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+    mask-image: linear-gradient(to left, black 65%, transparent 100%);
 }
-</style>
-</head>
-<body>
 
 <div class="hero">
 
