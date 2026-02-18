@@ -1,35 +1,100 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bhavana | ECE Portfolio</title>
-</head>
-<body style="font-family: Arial; background-color: #0d1117; color: white; padding: 40px;">
+<h2>My Portfolio</h2>
 
-    <h1>Hi, I'm Bhavana 👋</h1>
-    <h3>Electronics & Communication Engineering Student</h3>
+<style>
+.section-box {
+    margin: 10px 0;
+}
+button {
+    width: 250px;
+    padding: 12px;
+    margin: 6px;
+    font-size: 16px;
+    background-color: #161b22;
+    color: white;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #21262d;
+}
+.content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #30363d;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+</style>
 
-    <h2>About Me</h2>
-    <p>
-        Passionate about electronics, antenna design, embedded systems, and Python.
-        Currently building projects and gaining hands-on technical experience.
-    </p>
+<div class="section-box">
+<button onclick="showSection('edu')">Education</button>
+<button onclick="showSection('tech')">Technical Skills</button>
+<button onclick="showSection('cert')">Certificates & Workshops</button>
+<button onclick="showSection('proj')">Projects</button>
+<button onclick="showSection('soft')">Soft Skills</button>
+<button onclick="showSection('lang')">Languages</button>
+</div>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Python</li>
-        <li>Arduino</li>
-        <li>Circuit Design</li>
-        <li>Embedded Basics</li>
-    </ul>
+<div id="edu" class="content">
+<h3>Education</h3>
+<p>B.E in Electronics and Communication Engineering</p>
+<p>Rising Junior</p>
+</div>
 
-    <h2>Projects</h2>
-    <p>Coming soon...</p>
+<div id="tech" class="content">
+<h3>Technical Skills</h3>
+<ul>
+<li>Antenna Design Basics</li>
+<li>Microwave Theory</li>
+<li>Python Programming</li>
+<li>Circuit Simulation</li>
+<li>System Level Implementation</li>
+</ul>
+</div>
 
-    <h2>Certifications</h2>
-    <p>Antenna Workshop | Internship Training</p>
+<div id="cert" class="content">
+<h3>Certificates & Workshops</h3>
+<p>
+<a href="certificate1.pdf" target="_blank">View Antenna Workshop Certificate</a>
+</p>
+<p>
+<a href="certificate2.pdf" target="_blank">View Internship Certificate</a>
+</p>
+</div>
 
-    <h2>Contact</h2>
-    <p>Email: yourmail@email.com</p>
+<div id="proj" class="content">
+<h3>Projects</h3>
+<ul>
+<li>Line Follower Robot</li>
+<li>Python Logic Programs</li>
+<li>Basic Circuit Simulation Models</li>
+</ul>
+</div>
 
-</body>
-</html>
+<div id="soft" class="content">
+<h3>Soft Skills</h3>
+<ul>
+<li>Problem Solving</li>
+<li>Quick Learner</li>
+<li>Team Collaboration</li>
+<li>Time Management</li>
+</ul>
+</div>
+
+<div id="lang" class="content">
+<h3>Languages</h3>
+<ul>
+<li>English</li>
+<li>Kannada</li>
+<li>Hindi</li>
+</ul>
+</div>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll('.content');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
