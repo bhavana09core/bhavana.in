@@ -1,8 +1,9 @@
-```html
 <!DOCTYPE html>
 <html>
 <head>
   <title>Bhavana Portfolio</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body{
@@ -18,7 +19,7 @@
       left:60px;
       right:60px;
       display:flex;
-      justify-content:space-between;
+      justify-content:flex-end;
       font-size:15px;
     }
 
@@ -28,9 +29,9 @@
       color:#e0e0e0;
     }
 
-    /* BACKGROUND */
+    /* HERO BACKGROUND */
     .hero{
-      height:100vh;
+      min-height:100vh;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -41,6 +42,9 @@
         radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
         radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
         #0a0a0a;
+
+      background-size:cover;
+      background-repeat:no-repeat;
     }
 
     /* LEFT TEXT */
@@ -70,11 +74,11 @@
 
     /* RIGHT IMAGE */
     .right img{
-  height:620px;
-  border-radius:12px;
-}
+      height:620px;
+      border-radius:12px;
+    }
 
-    /* SECTION AREA BELOW */
+    /* SECTIONS BELOW */
     .section{
       padding:80px;
       background:#070710;
@@ -90,22 +94,63 @@
       max-width:900px;
       line-height:1.6;
     }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:120px 25px 40px 25px;
+      }
+
+      .left{
+        max-width:100%;
+      }
+
+      .left h1{
+        font-size:38px;
+      }
+
+      .left h3{
+        font-size:16px;
+      }
+
+      .left p{
+        font-size:15px;
+      }
+
+      .right img{
+        height:300px;
+        margin-top:25px;
+      }
+
+      .nav{
+        left:20px;
+        right:20px;
+        font-size:12px;
+        justify-content:center;
+        flex-wrap:wrap;
+      }
+
+      .section{
+        padding:50px 25px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
   <!-- TOP MENU -->
- <div class="nav">
-  <div></div>
-  <div>
+  <div class="nav">
     <span>About Me</span>
     <span>Education</span>
     <span>Technical Skills</span>
     <span>Certificates & Workshops</span>
     <span>Projects</span>
   </div>
-</div>
 
   <!-- HERO SECTION -->
   <div class="hero">
@@ -130,19 +175,18 @@
 
   </div>
 
-  <!-- ABOUT ME SECTION -->
+  <!-- ABOUT ME -->
   <div class="section">
-  <h2>About Me</h2>
+    <h2>About Me</h2>
 
-  <p style="font-family:'Times New Roman', Times, serif;">
-    I am an Electronics and Communication Engineering student driven by curiosity
-    and a strong passion for understanding how communication systems function.
-    My primary interests lie in antenna design, microwave theory, and practical
-    system-level implementation. I enjoy learning through simulation, programming,
-    and hands-on technical exploration.
-  </p>
-
-</div>
+    <p style="font-family:'Times New Roman', Times, serif;">
+      I am an Electronics and Communication Engineering student driven by curiosity
+      and a strong passion for understanding how communication systems function.
+      My primary interests lie in antenna design, microwave theory, and practical
+      system-level implementation. I enjoy learning through simulation, programming,
+      and hands-on technical exploration.
+    </p>
+  </div>
 
   <!-- EDUCATION -->
   <div class="section">
@@ -167,7 +211,6 @@
     <h2>Certificates & Workshops</h2>
     <p>
       Add your workshop and internship certificates here.
-      (You can later link PDF files from GitHub)
     </p>
   </div>
 
@@ -181,4 +224,3 @@
 
 </body>
 </html>
-```
