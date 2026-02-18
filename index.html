@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Bhavana Portfolio</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,46 +9,48 @@
       margin:0;
       font-family:Arial, sans-serif;
       color:white;
+      background:#0a0a0a;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    /* SQUARE HERO (1080x1080) */
+    .hero{
+      width:1080px;
+      height:1080px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:70px;
+      box-sizing:border-box;
+
+      background:
+        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.45), transparent 45%),
+        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.40), transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06), transparent 70%),
+        #0a0a0a;
+      border-radius:14px;
     }
 
     /* NAVBAR */
     .nav{
       position:absolute;
-      top:30px;
-      left:60px;
-      right:60px;
-      display:flex;
-      justify-content:flex-end;
-      font-size:15px;
+      top:25px;
+      right:40px;
+      font-size:14px;
     }
 
     .nav span{
-      margin-left:25px;
+      margin-left:20px;
+      color:#dcdcdc;
       cursor:pointer;
-      color:#e0e0e0;
-    }
-
-    /* HERO BACKGROUND */
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:80px;
-
-      background:
-        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
-        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
-        #0a0a0a;
-
-      background-size:cover;
-      background-repeat:no-repeat;
     }
 
     /* LEFT TEXT */
     .left{
-      max-width:650px;
+      max-width:520px;
     }
 
     .left h3{
@@ -59,34 +60,35 @@
     }
 
     .left h1{
-      font-size:64px;
+      font-size:60px;
       margin:4px 0;
-      line-height:1.1;
       color:#f0f0f0;
     }
 
     .left p{
       color:#d0d0d0;
       line-height:1.6;
-      font-size:17px;
-      margin-top:18px;
+      font-size:16px;
+      margin-top:16px;
     }
 
     /* RIGHT IMAGE */
     .right img{
-      height:620px;
+      height:520px;
       border-radius:12px;
     }
 
     /* SECTIONS BELOW */
     .section{
-      padding:80px;
+      padding:70px;
       background:#070710;
+      width:1080px;
+      box-sizing:border-box;
     }
 
     .section h2{
       color:#66cfff;
-      margin-bottom:15px;
+      margin-bottom:12px;
     }
 
     .section p{
@@ -95,13 +97,26 @@
       line-height:1.6;
     }
 
-    /* MOBILE RESPONSIVE */
+    /* MOBILE VERSION */
     @media (max-width: 768px){
 
+      body{
+        display:block;
+      }
+
       .hero{
+        width:100%;
+        height:auto;
         flex-direction:column;
         text-align:center;
-        padding:120px 25px 40px 25px;
+        padding:100px 25px 40px 25px;
+
+        /* MORE MATTE COLORS FOR MOBILE */
+        background:
+          radial-gradient(circle at 20% 85%, rgba(0,140,255,0.22), transparent 60%),
+          radial-gradient(circle at 80% 10%, rgba(170,0,255,0.20), transparent 60%),
+          radial-gradient(circle at 50% 60%, rgba(255,255,255,0.04), transparent 80%),
+          #0a0a0a;
       }
 
       .left{
@@ -113,7 +128,7 @@
       }
 
       .left h3{
-        font-size:16px;
+        font-size:15px;
       }
 
       .left p{
@@ -126,34 +141,31 @@
       }
 
       .nav{
-        left:20px;
-        right:20px;
-        font-size:12px;
-        justify-content:center;
-        flex-wrap:wrap;
+        position:static;
+        text-align:center;
+        margin-bottom:20px;
       }
 
       .section{
+        width:100%;
         padding:50px 25px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- TOP MENU -->
-  <div class="nav">
-    <span>About Me</span>
-    <span>Education</span>
-    <span>Technical Skills</span>
-    <span>Certificates & Workshops</span>
-    <span>Projects</span>
-  </div>
-
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <div class="hero">
+
+    <div class="nav">
+      <span>About Me</span>
+      <span>Education</span>
+      <span>Technical Skills</span>
+      <span>Certificates</span>
+      <span>Projects</span>
+    </div>
 
     <div class="left">
       <h3>Hello !!!</h3>
@@ -197,7 +209,7 @@
     </p>
   </div>
 
-  <!-- TECHNICAL SKILLS -->
+  <!-- SKILLS -->
   <div class="section">
     <h2>Technical Skills</h2>
     <p>
@@ -209,17 +221,13 @@
   <!-- CERTIFICATES -->
   <div class="section">
     <h2>Certificates & Workshops</h2>
-    <p>
-      Add your workshop and internship certificates here.
-    </p>
+    <p>Add your certificates here.</p>
   </div>
 
   <!-- PROJECTS -->
   <div class="section">
     <h2>Projects</h2>
-    <p>
-      Add your mini projects, circuit designs, simulations, and technical work here.
-    </p>
+    <p>Add your projects here.</p>
   </div>
 
 </body>
