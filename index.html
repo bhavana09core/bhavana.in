@@ -16,7 +16,7 @@
       min-height:100vh;
     }
 
-    /* SQUARE HERO (1080x1080) */
+    /* MAIN HERO */
     .hero{
       width:1080px;
       height:1080px;
@@ -31,6 +31,7 @@
         radial-gradient(circle at 75% 15%, rgba(170,0,255,0.40), transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06), transparent 70%),
         #0a0a0a;
+
       border-radius:14px;
     }
 
@@ -72,13 +73,20 @@
       margin-top:16px;
     }
 
-    /* RIGHT IMAGE */
+    /* RIGHT IMAGE - BLENDED */
     .right img{
       height:520px;
-      border-radius:12px;
+      border-radius:14px;
+
+      /* BLENDING EFFECT */
+      box-shadow:
+        0 0 60px rgba(0,140,255,0.25),
+        0 0 100px rgba(170,0,255,0.18);
+
+      opacity:0.96;
     }
 
-    /* SECTIONS BELOW */
+    /* SECTIONS */
     .section{
       padding:70px;
       background:#070710;
@@ -97,7 +105,7 @@
       line-height:1.6;
     }
 
-    /* MOBILE VERSION */
+    /* MOBILE VIEW */
     @media (max-width: 768px){
 
       body{
@@ -111,7 +119,7 @@
         text-align:center;
         padding:100px 25px 40px 25px;
 
-        /* MORE MATTE COLORS FOR MOBILE */
+        /* SOFTER MATTE COLORS */
         background:
           radial-gradient(circle at 20% 85%, rgba(0,140,255,0.22), transparent 60%),
           radial-gradient(circle at 80% 10%, rgba(170,0,255,0.20), transparent 60%),
@@ -151,6 +159,7 @@
         padding:50px 25px;
       }
     }
+
   </style>
 </head>
 
