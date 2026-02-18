@@ -1,100 +1,141 @@
-<h2>My Portfolio</h2>
-
+<!-- ABOUT SECTION WITH IMAGE LEFT + TEXT RIGHT -->
 <style>
-.section-box {
-    margin: 10px 0;
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
 }
+
+.profile-img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.section-buttons {
+  margin-top: 40px;
+}
+
 button {
-    width: 250px;
-    padding: 12px;
-    margin: 6px;
-    font-size: 16px;
-    background-color: #161b22;
-    color: white;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 12px 18px;
+  margin: 8px;
+  font-size: 15px;
+  background: #161b22;
+  color: white;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  cursor: pointer;
 }
+
 button:hover {
-    background-color: #21262d;
+  background: #21262d;
 }
+
 .content {
-    display: none;
-    padding: 15px;
-    border: 1px solid #30363d;
-    margin-top: 10px;
-    border-radius: 8px;
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #30363d;
+  border-radius: 10px;
 }
 </style>
 
-<div class="section-box">
-<button onclick="showSection('edu')">Education</button>
-<button onclick="showSection('tech')">Technical Skills</button>
-<button onclick="showSection('cert')">Certificates & Workshops</button>
-<button onclick="showSection('proj')">Projects</button>
-<button onclick="showSection('soft')">Soft Skills</button>
-<button onclick="showSection('lang')">Languages</button>
+<div class="container">
+  <!-- LEFT SIDE IMAGE -->
+  <img src="myphoto.jpg" class="profile-img">
+
+  <!-- RIGHT SIDE ABOUT -->
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      Hello! I am a rising junior pursuing a degree in Electronics and Communication Engineering. 
+      I am deeply interested in antenna design and microwave theory, and I enjoy exploring how 
+      complex communication systems work through simulation, programming, and system-level implementation.
+    </p>
+
+    <p>
+      I am passionate about learning how theoretical concepts translate into real-world engineering 
+      solutions. I continuously build my technical skills through workshops, projects, and hands-on 
+      experimentation in electronics and communication technologies.
+    </p>
+
+    <p>
+      My goal is to grow into a skilled engineer with strong knowledge in high-frequency systems, 
+      embedded technologies, and modern communication design.
+    </p>
+  </div>
 </div>
 
+<!-- 6 CLICKABLE SECTIONS -->
+<div class="section-buttons">
+  <button onclick="show('edu')">Education</button>
+  <button onclick="show('tech')">Technical Skills</button>
+  <button onclick="show('cert')">Certificates & Workshops</button>
+  <button onclick="show('proj')">Projects</button>
+  <button onclick="show('soft')">Soft Skills</button>
+  <button onclick="show('lang')">Languages</button>
+</div>
+
+<!-- CONTENT AREAS -->
+
 <div id="edu" class="content">
-<h3>Education</h3>
-<p>B.E in Electronics and Communication Engineering</p>
-<p>Rising Junior</p>
+  <h3>Education</h3>
+  <p>B.E in Electronics and Communication Engineering</p>
+  <p>Rising Junior</p>
 </div>
 
 <div id="tech" class="content">
-<h3>Technical Skills</h3>
-<ul>
-<li>Antenna Design Basics</li>
-<li>Microwave Theory</li>
-<li>Python Programming</li>
-<li>Circuit Simulation</li>
-<li>System Level Implementation</li>
-</ul>
+  <h3>Technical Skills</h3>
+  <ul>
+    <li>Antenna Design Basics</li>
+    <li>Microwave Theory</li>
+    <li>Python Programming</li>
+    <li>Circuit Simulation</li>
+    <li>System Level Implementation</li>
+  </ul>
 </div>
 
 <div id="cert" class="content">
-<h3>Certificates & Workshops</h3>
-<p>
-<a href="certificate1.pdf" target="_blank">View Antenna Workshop Certificate</a>
-</p>
-<p>
-<a href="certificate2.pdf" target="_blank">View Internship Certificate</a>
-</p>
+  <h3>Certificates & Workshops</h3>
+  <p><a href="antenna_certificate.jpg" target="_blank">View Antenna Workshop Certificate</a></p>
+  <p><a href="internship_certificate.jpg" target="_blank">View Internship Certificate</a></p>
 </div>
 
 <div id="proj" class="content">
-<h3>Projects</h3>
-<ul>
-<li>Line Follower Robot</li>
-<li>Python Logic Programs</li>
-<li>Basic Circuit Simulation Models</li>
-</ul>
+  <h3>Projects</h3>
+  <ul>
+    <li>Line Follower Robot</li>
+    <li>Python Mini Projects</li>
+    <li>Circuit Simulation Models</li>
+  </ul>
 </div>
 
 <div id="soft" class="content">
-<h3>Soft Skills</h3>
-<ul>
-<li>Problem Solving</li>
-<li>Quick Learner</li>
-<li>Team Collaboration</li>
-<li>Time Management</li>
-</ul>
+  <h3>Soft Skills</h3>
+  <ul>
+    <li>Problem Solving</li>
+    <li>Quick Learner</li>
+    <li>Team Collaboration</li>
+    <li>Time Management</li>
+  </ul>
 </div>
 
 <div id="lang" class="content">
-<h3>Languages</h3>
-<ul>
-<li>English</li>
-<li>Kannada</li>
-<li>Hindi</li>
-</ul>
+  <h3>Languages</h3>
+  <ul>
+    <li>English</li>
+    <li>Kannada</li>
+    <li>Hindi</li>
+  </ul>
 </div>
 
 <script>
-function showSection(id) {
-    let sections = document.querySelectorAll('.content');
-    sections.forEach(section => section.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
+function show(id) {
+  document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
 }
 </script>
