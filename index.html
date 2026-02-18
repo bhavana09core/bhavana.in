@@ -7,90 +7,89 @@
   <style>
     body{
       margin:0;
+      background:#0a0a0a;
       font-family:Arial, sans-serif;
       color:white;
-      background:#0a0a0a;
       display:flex;
       justify-content:center;
       align-items:center;
       min-height:100vh;
     }
 
-    /* MAIN HERO */
+    /* 1080 x 1080 MAIN BOX */
     .hero{
       width:1080px;
       height:1080px;
+      padding:60px;
+      box-sizing:border-box;
+      position:relative;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      padding:70px;
-      box-sizing:border-box;
+      gap:60px;
 
+      /* MATTE GRAIN BACKGROUND */
       background:
-        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.45), transparent 45%),
-        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.40), transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.06), transparent 70%),
+        radial-gradient(circle at 20% 80%, rgba(0,140,255,0.30), transparent 50%),
+        radial-gradient(circle at 80% 10%, rgba(170,0,255,0.25), transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04), transparent 70%),
         #0a0a0a;
-
       border-radius:14px;
     }
 
-    /* NAVBAR */
-    .nav{
+    /* TOP MENU */
+    .menu{
       position:absolute;
       top:25px;
-      right:40px;
+      left:60px;
       font-size:14px;
     }
 
-    .nav span{
-      margin-left:20px;
+    .menu span{
+      margin-right:25px;
       color:#dcdcdc;
       cursor:pointer;
     }
 
-    /* LEFT TEXT */
-    .left{
-      max-width:520px;
+    /* LEFT IMAGE */
+    .photo img{
+      height:520px;
+      border-radius:12px;
+
+      /* SOFT BLEND */
+      box-shadow:
+        0 0 50px rgba(0,140,255,0.15),
+        0 0 80px rgba(170,0,255,0.12);
     }
 
-    .left h3{
-      color:#66cfff;
-      margin:2px 0;
-      line-height:1.2;
+    /* RIGHT TEXT */
+    .info{
+      max-width:420px;
     }
 
-    .left h1{
-      font-size:60px;
-      margin:4px 0;
+    .info h1{
+      font-size:56px;
+      margin:6px 0;
       color:#f0f0f0;
     }
 
-    .left p{
+    .info h3{
+      color:#66cfff;
+      margin:2px 0;
+      font-size:18px;
+    }
+
+    .info p{
+      margin-top:14px;
       color:#d0d0d0;
       line-height:1.6;
       font-size:16px;
-      margin-top:16px;
     }
 
-    /* RIGHT IMAGE - BLENDED */
-    .right img{
-      height:520px;
-      border-radius:14px;
-
-      /* BLENDING EFFECT */
-      box-shadow:
-        0 0 60px rgba(0,140,255,0.25),
-        0 0 100px rgba(170,0,255,0.18);
-
-      opacity:0.96;
-    }
-
-    /* SECTIONS */
+    /* SECTIONS BELOW */
     .section{
+      width:1080px;
       padding:70px;
       background:#070710;
-      width:1080px;
       box-sizing:border-box;
     }
 
@@ -101,11 +100,11 @@
 
     .section p{
       color:#cfcfcf;
-      max-width:900px;
       line-height:1.6;
+      max-width:900px;
     }
 
-    /* MOBILE VIEW */
+    /* MOBILE */
     @media (max-width: 768px){
 
       body{
@@ -119,38 +118,27 @@
         text-align:center;
         padding:100px 25px 40px 25px;
 
-        /* SOFTER MATTE COLORS */
+        /* MORE MATTE ON MOBILE */
         background:
-          radial-gradient(circle at 20% 85%, rgba(0,140,255,0.22), transparent 60%),
-          radial-gradient(circle at 80% 10%, rgba(170,0,255,0.20), transparent 60%),
-          radial-gradient(circle at 50% 60%, rgba(255,255,255,0.04), transparent 80%),
+          radial-gradient(circle at 20% 85%, rgba(0,140,255,0.20), transparent 60%),
+          radial-gradient(circle at 80% 10%, rgba(170,0,255,0.18), transparent 60%),
           #0a0a0a;
       }
 
-      .left{
-        max-width:100%;
-      }
-
-      .left h1{
-        font-size:38px;
-      }
-
-      .left h3{
-        font-size:15px;
-      }
-
-      .left p{
-        font-size:15px;
-      }
-
-      .right img{
+      .photo img{
         height:300px;
-        margin-top:25px;
       }
 
-      .nav{
+      .info h1{
+        font-size:36px;
+      }
+
+      .info h3{
+        font-size:16px;
+      }
+
+      .menu{
         position:static;
-        text-align:center;
         margin-bottom:20px;
       }
 
@@ -165,19 +153,23 @@
 
 <body>
 
-  <!-- HERO -->
   <div class="hero">
 
-    <div class="nav">
+    <!-- TOP LEFT MENU -->
+    <div class="menu">
       <span>About Me</span>
-      <span>Education</span>
       <span>Technical Skills</span>
-      <span>Certificates</span>
+      <span>Certificates & Workshops</span>
       <span>Projects</span>
     </div>
 
-    <div class="left">
-      <h3>Hello !!!</h3>
+    <!-- LEFT PHOTO -->
+    <div class="photo">
+      <img src="bavna.png" alt="Bhavana">
+    </div>
+
+    <!-- RIGHT TEXT -->
+    <div class="info">
       <h1>I'm Bhavana</h1>
 
       <h3>Electronics and Communication Engineering Student</h3>
@@ -188,10 +180,6 @@
         about exploring communication systems and applying technical concepts to
         real-world challenges through hands-on learning and practical experience.
       </p>
-    </div>
-
-    <div class="right">
-      <img src="bavna.png" alt="Profile Photo">
     </div>
 
   </div>
@@ -209,16 +197,7 @@
     </p>
   </div>
 
-  <!-- EDUCATION -->
-  <div class="section">
-    <h2>Education</h2>
-    <p>
-      Bachelor of Engineering in Electronics and Communication Engineering<br>
-      Rising Junior
-    </p>
-  </div>
-
-  <!-- SKILLS -->
+  <!-- TECHNICAL SKILLS -->
   <div class="section">
     <h2>Technical Skills</h2>
     <p>
