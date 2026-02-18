@@ -10,7 +10,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
 body{
@@ -20,25 +20,25 @@ body{
     overflow:hidden;
 }
 
-/* BACKGROUND (purple + blue + black premium shades with matte effect) */
+/* DIMMER PREMIUM BACKGROUND */
 .hero{
     height:100vh;
     width:100%;
     position:relative;
     background: linear-gradient(120deg,
-        #0a0a0a 20%,     /* deep matte black */
-        #1c0f3a 45%,     /* premium purple */
-        #0f2a52 75%,     /* deep blue */
-        #000000 100%);   /* black fade */
+        #050505 25%,     /* softer matte black */
+        #140a2e 50%,     /* dim purple */
+        #0a1c36 75%,     /* dim blue */
+        #000000 100%);
 }
 
-/* Matte grain overlay */
-.hero::after{
+/* MATTE OVERLAY (applied ONLY to background) */
+.hero::before{
     content:"";
     position:absolute;
     inset:0;
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(1px);
+    background:rgba(0,0,0,0.35);  /* dims colors */
+    z-index:0;
 }
 
 /* TOP LEFT NAV */
@@ -75,8 +75,9 @@ body{
 
 .hello{
     color:#6fb3ff;
-    font-size:18px;
-    margin-bottom:10px;
+    font-size:24px;   /* made bigger */
+    margin-bottom:12px;
+    font-weight:500;
 }
 
 .name{
@@ -89,7 +90,7 @@ body{
     margin-top:15px;
     font-size:18px;
     font-weight:500;
-    color:#6fb3ff; /* simple text, NO background effect */
+    color:#6fb3ff;
 }
 
 .bio{
@@ -99,18 +100,21 @@ body{
     color:#d6d6d6;
 }
 
-/* PROFILE IMAGE (keep original color) */
+/* PROFILE IMAGE */
 .profile{
     position:absolute;
     right:0;
     bottom:0;
     height:100%;
     z-index:1;
+    pointer-events:none;
 }
 
 .profile img{
     height:100%;
     object-fit:cover;
+    filter:none !important;      /* prevents black & white */
+    mix-blend-mode:normal;       /* keeps natural colors */
 }
 </style>
 </head>
