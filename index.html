@@ -1,149 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhavana Portfolio</title>
+  <title>Bhavana Portfolio</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Poppins",sans-serif;
-}
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      color:white;
+      background:#0a0a0a;
 
-body{
-  color:white;
-  height:100vh;
-  overflow:hidden;
-}
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
 
-/* HERO BACKGROUND — premium purple, blue, black matte */
-.hero{
-  height:100vh;
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px;
-  background:
-    radial-gradient(circle at 30% 20%, #7C3AED 0%, transparent 40%),
-    radial-gradient(circle at 80% 60%, #2563EB 0%, transparent 40%),
-    #0B0B0F;
-  position:relative;
-}
+    /* 1080x1080 MAIN FRAME */
+    .frame{
+      width:1080px;
+      height:1080px;
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+    }
 
-/* MATTE GRAIN EFFECT */
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  opacity:0.25;
-  pointer-events:none;
-}
+    /* TOP LEFT MENU */
+    .nav{
+      position:absolute;
+      top:30px;
+      left:40px;
+      font-size:15px;
+      z-index:10;
+    }
 
-/* NAVBAR */
-nav{
-  position:absolute;
-  top:30px;
-  left:60px;
-  z-index:2;
-}
+    .nav span{
+      margin-right:25px;
+      cursor:pointer;
+      color:#d0d0d0;
+    }
 
-nav ul{
-  display:flex;
-  gap:40px;
-  list-style:none;
-  font-size:14px;
-  letter-spacing:1px;
-}
+    /* HERO SECTION */
+    .hero{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:80px;
 
-nav li{
-  cursor:pointer;
-  opacity:0.85;
-}
+      /* DARKER MATTE BACKGROUND */
+      background:
+        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.25), transparent 55%),
+        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.22), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03), transparent 70%),
+        #0a0a0a;
+    }
 
-nav li:hover{
-  opacity:1;
-  color:#7C3AED;
-}
+    /* LEFT TEXT */
+    .left{
+      max-width:520px;
+    }
 
-/* LEFT TEXT AREA */
-.content{
-  max-width:600px;
-  z-index:2;
-}
+    /* HELLO TEXT BIGGER */
+    .left .hello{
+      font-size:28px;
+      margin-bottom:6px;
+      color:#cccccc;
+    }
 
-.hello{
-  color:#60A5FA;
-  margin-bottom:10px;
-  font-weight:500;
-}
+    .left h1{
+      font-size:56px;
+      margin:4px 0;
+      line-height:1.1;
+      color:#f0f0f0;
+    }
 
-h1{
-  font-size:64px;
-  font-weight:700;
-  margin-bottom:10px;
-}
+    /* NORMAL TEXT (NO HIGHLIGHT) */
+    .left .role{
+      font-size:20px;
+      color:#e0e0e0;
+      margin-top:8px;
+    }
 
-.tagline{
-  display:inline-block;
-  background:#2563EB;
-  padding:8px 14px;
-  font-size:14px;
-  margin-bottom:20px;
-}
+    .left p{
+      color:#cfcfcf;
+      line-height:1.6;
+      font-size:16px;
+      margin-top:18px;
+    }
 
-.bio{
-  font-size:15px;
-  line-height:1.7;
-  color:#D1D5DB;
-}
+    /* RIGHT IMAGE */
+    .right img{
+      height:520px;
+      border-radius:12px;
+    }
 
-/* PROFILE IMAGE */
-.profile img{
-  height:520px;
-  object-fit:cover;
-}
-</style>
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li>About Me</li>
-    <li>Education</li>
-    <li>Skills</li>
-    <li>Workshops & Certificates</li>
-    <li>Projects</li>
-  </ul>
-</nav>
+  <div class="frame">
 
-<section class="hero">
-  <div class="content">
-    <p class="hello">Hello !!!</p>
+    <!-- TOP LEFT MENU -->
+    <div class="nav">
+      <span>About Me</span>
+      <span>Education</span>
+      <span>Certificates & Workshops</span>
+      <span>Projects</span>
+    </div>
 
-    <h1>I'm Bhavana</h1>
+    <!-- HERO -->
+    <div class="hero">
 
-    <h3 class="tagline">
-      Electronics and Communication Engineering Student
-    </h3>
+      <div class="left">
+        <div class="hello">Hello !!!</div>
 
-    <p class="bio">
-      A rising junior with a strong interest in antenna design and microwave theory,
-      focused on simulation, programming, and system-level implementation. Passionate
-      about exploring communication systems and applying technical concepts to
-      real-world challenges through hands-on learning and practical experience.
-    </p>
+        <h1>I'm Bhavana</h1>
+
+        <div class="role">
+          Electronics and Communication Engineering Student
+        </div>
+
+        <p>
+          A rising junior with a strong interest in antenna design and microwave theory,
+          focused on simulation, programming, and system-level implementation. Passionate
+          about exploring communication systems and applying technical concepts to
+          real-world challenges through hands-on learning and practical experience.
+        </p>
+      </div>
+
+      <div class="right">
+        <img src="bavna.png" alt="Profile Photo">
+      </div>
+
+    </div>
+
   </div>
-
-  <div class="profile">
-    <img src="bavna.png" alt="Bhavana">
-  </div>
-</section>
 
 </body>
 </html>
