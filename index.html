@@ -1,135 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bhavana Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavana Portfolio</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family:Arial, sans-serif;
-      background:#0a0a0a;
-      color:white;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
 
-    /* MAIN LAYOUT */
-    .main{
-      display:flex;
-      min-height:100vh;
-    }
+body{
+  color:white;
+  height:100vh;
+  overflow:hidden;
+}
 
-    /* LEFT PANEL (ZOOMED + CENTERED CONTENT) */
-    .left{
-      width:45%;
-      height:100vh;
-      display:flex;
-      align-items:center;        /* vertical centering */
-      justify-content:center;    /* horizontal centering */
-      padding:40px;
+/* HERO BACKGROUND — premium purple, blue, black matte */
+.hero{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px;
+  background:
+    radial-gradient(circle at 30% 20%, #7C3AED 0%, transparent 40%),
+    radial-gradient(circle at 80% 60%, #2563EB 0%, transparent 40%),
+    #0B0B0F;
+  position:relative;
+}
 
-      background:
-        radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
-        radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
-        #0a0a0a;
-    }
+/* MATTE GRAIN EFFECT */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity:0.25;
+  pointer-events:none;
+}
 
-    /* INNER BLOCK TO CONTROL POSITION */
-    .intro{
-      max-width:520px;
-      text-align:left;
-      transform:translateX(40px); /* moves content slightly toward center */
-    }
+/* NAVBAR */
+nav{
+  position:absolute;
+  top:30px;
+  left:60px;
+  z-index:2;
+}
 
-    .intro h1{
-      font-size:72px;      /* zoomed text */
-      margin:10px 0;
-      letter-spacing:1px;
-    }
+nav ul{
+  display:flex;
+  gap:40px;
+  list-style:none;
+  font-size:14px;
+  letter-spacing:1px;
+}
 
-    .intro h3{
-      color:#66cfff;
-      margin:6px 0;
-      font-size:24px;
-    }
+nav li{
+  cursor:pointer;
+  opacity:0.85;
+}
 
-    .intro p{
-      color:#d0d0d0;
-      line-height:1.7;
-      font-size:19px;
-      margin-top:15px;
-    }
+nav li:hover{
+  opacity:1;
+  color:#7C3AED;
+}
 
-    .profile{
-      margin-top:30px;
-      display:flex;
-      justify-content:center;
-    }
+/* LEFT TEXT AREA */
+.content{
+  max-width:600px;
+  z-index:2;
+}
 
-    .profile img{
-      width:320px;     /* zoomed image */
-      border-radius:14px;
-      box-shadow:0 0 40px rgba(0,0,0,0.4);
-    }
+.hello{
+  color:#60A5FA;
+  margin-bottom:10px;
+  font-weight:500;
+}
 
-    /* RIGHT SIDE CONTENT */
-    .right{
-      width:55%;
-      padding:90px 100px;
-      background:#070710;
-    }
+h1{
+  font-size:64px;
+  font-weight:700;
+  margin-bottom:10px;
+}
 
-    .section{
-      margin-bottom:70px;
-      max-width:820px;
-    }
+.tagline{
+  display:inline-block;
+  background:#2563EB;
+  padding:8px 14px;
+  font-size:14px;
+  margin-bottom:20px;
+}
 
-    .section h2{
-      color:#66cfff;
-      margin-bottom:15px;
-      font-size:34px;
-    }
+.bio{
+  font-size:15px;
+  line-height:1.7;
+  color:#D1D5DB;
+}
 
-    .section p{
-      line-height:1.8;
-      color:#cfcfcf;
-      font-size:18px;
-    }
-
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:15px;
-    }
-
-    .skill{
-      background:#111122;
-      padding:12px 18px;
-      border-radius:10px;
-      font-size:16px;
-    }
-  </style>
+/* PROFILE IMAGE */
+.profile img{
+  height:520px;
+  object-fit:cover;
+}
+</style>
 </head>
 
 <body>
 
-<div class="main">
+<nav>
+  <ul>
+    <li>About Me</li>
+    <li>Education</li>
+    <li>Skills</li>
+    <li>Workshops & Certificates</li>
+    <li>Projects</li>
+  </ul>
+</nav>
 
-  <!-- LEFT PANEL -->
-  <div class="left">
-    <div class="intro">
-      <h3>Hello !!!</h3>
-      <h1>I'm Bhavana</h1>
-      <h3>Electronics & Communication Engineering Student</h3>
+<section class="hero">
+  <div class="content">
+    <p class="hello">Hello !!!</p>
 
-      <p>
-        A rising junior passionate about antenna design, microwave theory,
-        and communication systems. Focused on simulation, programming,
-        and real-world implementation.
-      </p>
+    <h1>I'm Bhavana</h1>
 
-      <div class="profile">
-        <img src="bavna.png">
-      </div>
-    </div>
+    <h3 class="tagline">
+      Electronics and Communication Engineering Student
+    </h3>
+
+    <p class="bio">
+      A rising junior with a strong interest in antenna design and microwave theory,
+      focused on simulation, programming, and system-level implementation. Passionate
+      about exploring communication systems and applying technical concepts to
+      real-world challenges through hands-on learning and practical experience.
+    </p>
   </div>
+
+  <div class="profile">
+    <img src="bavna.png" alt="Bhavana">
+  </div>
+</section>
+
+</body>
+</html>
