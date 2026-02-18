@@ -1,141 +1,113 @@
-<!-- ABOUT SECTION WITH IMAGE LEFT + TEXT RIGHT -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bhavana Portfolio</title>
+
 <style>
-.container {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+/* FULL SCREEN HERO */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #000000, #1a1a2e, #16213e);
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin-top: 40px;
+  justify-content: space-between;
+  padding: 60px 100px;
+  box-sizing: border-box;
 }
 
-.profile-img {
-  width: 220px;
-  border-radius: 12px;
+/* LEFT TEXT SIDE */
+.left {
+  max-width: 700px;
 }
 
-.about-text {
-  max-width: 600px;
+.left h1 {
+  font-size: 70px;
+  margin: 10px 0;
 }
 
-.section-buttons {
-  margin-top: 40px;
+.left h3 {
+  color: #00bfff;
+  letter-spacing: 2px;
 }
 
-button {
-  padding: 12px 18px;
-  margin: 8px;
-  font-size: 15px;
-  background: #161b22;
-  color: white;
-  border: 1px solid #30363d;
-  border-radius: 8px;
+.left p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* RIGHT IMAGE */
+.right img {
+  height: 700px;
+  border-radius: 20px;
+  filter: grayscale(100%);
+}
+
+/* TOP NAVBAR */
+.nav {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  right: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.nav span {
+  margin-right: 30px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #21262d;
-}
-
-.content {
-  display: none;
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #30363d;
-  border-radius: 10px;
+.nav span:hover {
+  color: #00bfff;
 }
 </style>
+</head>
 
-<div class="container">
-  <!-- LEFT SIDE IMAGE -->
-  <img src="myphoto.jpg" class="profile-img">
+<body>
 
-  <!-- RIGHT SIDE ABOUT -->
-  <div class="about-text">
-    <h2>About Me</h2>
-    <p>
-      Hello! I am a rising junior pursuing a degree in Electronics and Communication Engineering. 
-      I am deeply interested in antenna design and microwave theory, and I enjoy exploring how 
-      complex communication systems work through simulation, programming, and system-level implementation.
-    </p>
-
-    <p>
-      I am passionate about learning how theoretical concepts translate into real-world engineering 
-      solutions. I continuously build my technical skills through workshops, projects, and hands-on 
-      experimentation in electronics and communication technologies.
-    </p>
-
-    <p>
-      My goal is to grow into a skilled engineer with strong knowledge in high-frequency systems, 
-      embedded technologies, and modern communication design.
-    </p>
+<div class="nav">
+  <div><b>ONLINE PORTFOLIO</b></div>
+  <div>
+    <span>About Me</span>
+    <span>Education</span>
+    <span>Projects</span>
+    <span>Certificates</span>
+    <span>Contact</span>
   </div>
 </div>
 
-<!-- 6 CLICKABLE SECTIONS -->
-<div class="section-buttons">
-  <button onclick="show('edu')">Education</button>
-  <button onclick="show('tech')">Technical Skills</button>
-  <button onclick="show('cert')">Certificates & Workshops</button>
-  <button onclick="show('proj')">Projects</button>
-  <button onclick="show('soft')">Soft Skills</button>
-  <button onclick="show('lang')">Languages</button>
+<div class="hero">
+
+  <div class="left">
+    <h3>Hello !!!</h3>
+    <h1>I'm Bhavana</h1>
+    <h3>Electronics & Communication Engineering Student</h3>
+
+    <p>
+      I am a rising junior pursuing Electronics and Communication Engineering,
+      driven by a strong interest in antenna design, microwave theory, simulation,
+      programming, and system-level implementation. I enjoy exploring how
+      communication systems work and applying technical concepts through
+      practical learning and projects.
+    </p>
+  </div>
+
+  <div class="right">
+    <img src="yourphoto.jpg">
+  </div>
+
 </div>
 
-<!-- CONTENT AREAS -->
-
-<div id="edu" class="content">
-  <h3>Education</h3>
-  <p>B.E in Electronics and Communication Engineering</p>
-  <p>Rising Junior</p>
-</div>
-
-<div id="tech" class="content">
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>Antenna Design Basics</li>
-    <li>Microwave Theory</li>
-    <li>Python Programming</li>
-    <li>Circuit Simulation</li>
-    <li>System Level Implementation</li>
-  </ul>
-</div>
-
-<div id="cert" class="content">
-  <h3>Certificates & Workshops</h3>
-  <p><a href="antenna_certificate.jpg" target="_blank">View Antenna Workshop Certificate</a></p>
-  <p><a href="internship_certificate.jpg" target="_blank">View Internship Certificate</a></p>
-</div>
-
-<div id="proj" class="content">
-  <h3>Projects</h3>
-  <ul>
-    <li>Line Follower Robot</li>
-    <li>Python Mini Projects</li>
-    <li>Circuit Simulation Models</li>
-  </ul>
-</div>
-
-<div id="soft" class="content">
-  <h3>Soft Skills</h3>
-  <ul>
-    <li>Problem Solving</li>
-    <li>Quick Learner</li>
-    <li>Team Collaboration</li>
-    <li>Time Management</li>
-  </ul>
-</div>
-
-<div id="lang" class="content">
-  <h3>Languages</h3>
-  <ul>
-    <li>English</li>
-    <li>Kannada</li>
-    <li>Hindi</li>
-  </ul>
-</div>
-
-<script>
-function show(id) {
-  document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
-  document.getElementById(id).style.display = 'block';
-}
-</script>
+</body>
+</html>
