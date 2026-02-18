@@ -1,50 +1,44 @@
+Here is a clean, final single code block exactly as you described:
+
+* Left side → your photo
+* Right side → About Me content
+* Top menu → About Me, Education, Technical Skills, Certificates & Workshops, Projects
+* Under name →
+  Electronics and Communication Engineering Student
+  I am a rising junior driven by antenna design, microwave theory, simulation, programming
+* Simple blue–purple–black background
+* No animations
+* Clean spacing
+
+Replace:
+
+* `yourphoto.jpg`
+* Certificate file names later if needed
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bhavana Portfolio</title>
+
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   color:white;
 }
 
-/* SIMPLE CLEAN BACKGROUND LIKE REFERENCE */
+/* BACKGROUND */
 .hero{
   height:100vh;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:80px;
-
   background:
     radial-gradient(circle at 15% 85%, rgba(0,140,255,0.55), transparent 40%),
     radial-gradient(circle at 75% 15%, rgba(170,0,255,0.5), transparent 35%),
-    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08), transparent 60%),
     #0a0a0a;
-}
-
-/* LEFT TEXT */
-.left{
-  max-width:650px;
-}
-
-.left h1{
-  font-size:68px;
-  margin:10px 0;
-  color:#eaeaea;
-}
-
-.left h3{
-  color:#66cfff;
-}
-
-.left p{
-  line-height:1.6;
-  color:#d0d0d0;
-}
-
-/* RIGHT IMAGE */
-.right img{
-  height:650px;
-  border-radius:10px;
-  filter:grayscale(100%);
 }
 
 /* NAVBAR */
@@ -55,11 +49,88 @@ body{
   right:60px;
   display:flex;
   justify-content:space-between;
+  font-size:15px;
 }
 
 .nav span{
   margin-left:25px;
   cursor:pointer;
-  color:#dcdcdc;
+  color:#e0e0e0;
+}
+
+/* LEFT IMAGE */
+.left img{
+  height:600px;
+  border-radius:12px;
+  filter:grayscale(100%);
+}
+
+/* RIGHT TEXT */
+.right{
+  max-width:650px;
+}
+
+/* TEXT SPACING CONTROL */
+.right h3{
+  margin:2px 0;
+  color:#66cfff;
+}
+
+.right h1{
+  font-size:60px;
+  margin:4px 0;
+}
+
+.right p{
+  margin-top:12px;
+  line-height:1.6;
+  color:#d0d0d0;
+  font-size:17px;
 }
 </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="nav">
+  <b>ONLINE PORTFOLIO</b>
+  <div>
+    <span>About Me</span>
+    <span>Education</span>
+    <span>Technical Skills</span>
+    <span>Certificates & Workshops</span>
+    <span>Projects</span>
+  </div>
+</div>
+
+<!-- MAIN SECTION -->
+<div class="hero">
+
+  <!-- LEFT SIDE IMAGE -->
+  <div class="left">
+    <img src="yourphoto.jpg">
+  </div>
+
+  <!-- RIGHT SIDE ABOUT ME -->
+  <div class="right">
+    <h3>Hello !!!</h3>
+    <h1>I'm Bhavana</h1>
+
+    <h3>Electronics and Communication Engineering Student</h3>
+
+    <p>
+      I am a rising junior driven by antenna design, microwave theory,
+      simulation, programming, and system-level implementation.
+    </p>
+
+    <p>
+      I am passionate about exploring communication systems and I enjoy applying technical concepts to real-world communication systems through hands-on learning.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
+```
