@@ -26,18 +26,18 @@ body{
     width:100%;
     position:relative;
     background: linear-gradient(120deg,
-        #050505 25%,     /* softer matte black */
-        #140a2e 50%,     /* dim purple */
-        #0a1c36 75%,     /* dim blue */
+        #050505 25%,
+        #140a2e 50%,
+        #0a1c36 75%,
         #000000 100%);
 }
 
-/* MATTE OVERLAY (applied ONLY to background) */
+/* MATTE DIM EFFECT */
 .hero::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.35);  /* dims colors */
+    background:rgba(0,0,0,0.35);
     z-index:0;
 }
 
@@ -67,15 +67,15 @@ body{
 .content{
     position:absolute;
     top:50%;
-    left:60px;
+    left:100px;        /* moved slightly towards center */
     transform:translateY(-50%);
-    max-width:520px;
+    max-width:560px;
     z-index:2;
 }
 
 .hello{
     color:#6fb3ff;
-    font-size:24px;   /* made bigger */
+    font-size:24px;
     margin-bottom:12px;
     font-weight:500;
 }
@@ -94,9 +94,9 @@ body{
 }
 
 .bio{
-    margin-top:20px;
-    font-size:15px;
-    line-height:1.7;
+    margin-top:22px;
+    font-size:17px;      /* bigger paragraph */
+    line-height:1.8;
     color:#d6d6d6;
 }
 
@@ -111,10 +111,10 @@ body{
 }
 
 .profile img{
-    height:100%;
+    height:88%;          /* slightly smaller image */
     object-fit:cover;
-    filter:none !important;      /* prevents black & white */
-    mix-blend-mode:normal;       /* keeps natural colors */
+    filter:none !important;
+    mix-blend-mode:normal;
 }
 </style>
 </head>
