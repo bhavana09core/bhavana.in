@@ -100,27 +100,6 @@ body{
     color:#d6d6d6;
 }
 
-/* PROFILE IMAGE */
-.profile{
-    position:absolute;
-    right:0;
-    bottom:0;
-    height:100%;
-    z-index:1;
-    pointer-events:none;
-}
-
-.profile img{
-    height:70%;
-    object-fit:cover;
-
-    /* Blend into background */
-    filter: brightness(0.9) contrast(0.9);
-    
-    /* Soft fade into background from left side */
-    -webkit-mask-image: linear-gradient(to left, black 75%, transparent 100%);
-    mask-image: linear-gradient(to left, black 75%, transparent 100%);
-}
 </style>
 </head>
 <body>
